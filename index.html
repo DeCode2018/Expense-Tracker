@@ -1,13 +1,22 @@
 <html ng-app="expensesApp">
-  <head>
-    <meta charset="utf-8">
-    <title>Simple Expense Tracker</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src="app.js"></script>
-  </head>
-  <body ng-controller="ExpensesViewController">
-    My Name is: "{{name}}"
+<head>
+  <meta charset="utf-8">
+  <title>Simple Expense Tracker</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="ExpensesViewController">
+  <h1>{{phrase}}</h1>
+  {{expense.description}}:{{expense.amount}}
+  <button ng-click="increaseButton()">Click to Increase</button>
+  <div  style = "margin-top: 50px"></div>
+  <input ng-model= 'expense.description' type = "text"/>
+  <div  style = "margin-top: 50px"></div>
+  <input ng-model= 'expense.amount' type = "text"/>
+  <div  style = "margin-top: 50px"></div>
+  <textarea ng-model= 'phrase' name="name" rows="8" cols="80"></textarea>
+
 
 
   </body>
-</html>
+  </html>
