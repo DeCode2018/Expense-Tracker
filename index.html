@@ -6,16 +6,15 @@
   <script src="app.js"></script>
 </head>
 <body ng-controller="ExpensesViewController">
-  <h1>{{phrase}}</h1>
-  {{expense.description}}:{{expense.amount}}
-  <button ng-click="increaseButton()">Click to Increase</button>
-  <div  style = "margin-top: 50px"></div>
-  <input ng-model= 'expense.description' type = "text"/>
-  <div  style = "margin-top: 50px"></div>
-  <input ng-model= 'expense.amount' type = "text"/>
-  <div  style = "margin-top: 50px"></div>
-  <textarea ng-model= 'phrase' name="name" rows="8" cols="80"></textarea>
+  <h1> list of items using ng-repeat</h1>
+  <ul>
+    <li ng-repeat = 'item in items'>{{item.name}} - ingredients:
+      <span ng-repeat = 'ingredient in item.ingredients' style="color:blue">{{ingredient}}
 
+    </span>
+
+    </li>
+  </ul>
 
 
   </body>
